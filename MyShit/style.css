@@ -1,0 +1,37 @@
+body.login-body{
+  background-color: rgb(238,159,53);
+}
+
+.container.login-container{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.card.login-card{
+  background-color: #3D1901;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+img.login-img{
+  padding-bottom: 17px;
+  margin: auto;
+  display: block;
+}
+
+form.login-input{
+  max-width: 300px;
+  margin: auto;
+}
+input.login-btn{
+  color: white;
+  background-color: #008369;
+  margin-bottom: 1.2rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+label.login-checkbox{
+  color: white;
+}

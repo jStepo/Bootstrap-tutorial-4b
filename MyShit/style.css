@@ -1,7 +1,9 @@
+/*###STANDART####*/
 body.login-body{
   background-color: rgb(238,159,53);
 }
 
+/*###LOGIN###*/
 .container.login-container{
   margin-top: 4%;
   margin-bottom: 4%;
@@ -40,6 +42,8 @@ input.login-btn{
 label.login-checkbox{
   color: white;
 }
+/*###LOGIN ENDE###*/
+
 /*NAVBAR*/
 
 nav.navbar{
@@ -67,11 +71,51 @@ nav a{
   border: none;
 }
 
+/*NAVBAR ENDE*/
 
+/*###ÜBEN###*/
+h4.custom-fonts:hover{
+  color: rgb(238,159,53)!important;
+}
+.uben-form{
+  display: block;
+  text-align: center;
+  background-color: #3D1901;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
 
+.eigenschaft-class{
+  padding-top:0;
+  padding-left: 0;
+  padding-right: 0;
+}
 
+.uben-select{
+  max-width: 250px;
+  min-width: 250px;
+  margin: auto;
+}
 
+@media screen and (min-width: 768px){
+  .eigenschaft-class{
+    padding-top: 120px;
+    padding-left: 15px;
+  }
+}
 
+@media screen and (min-width: 768px){
+  .uben-select{
+    max-width: auto;
+    min-width: auto;
+  }
+}
+
+.custom-fonts{
+  color: white;
+}
 
 
 

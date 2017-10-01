@@ -72,7 +72,18 @@ nav a{
 }
 
 /*NAVBAR ENDE*/
-
+/*###JUMBOTRON###*/
+.jumbotron{
+  text-align: center;
+  margin:0;
+}
+@media screen and (min-width: 768px){
+  .jumbotron{
+    text-align: right;
+    margin:0;
+  }
+}
+/*###JUMBOTRON###*/
 /*###ÜBEN###*/
 h4.custom-fonts:hover{
   color: rgb(238,159,53)!important;
@@ -101,7 +112,7 @@ h4.custom-fonts:hover{
 
 @media screen and (min-width: 768px){
   .eigenschaft-class{
-    padding-top: 120px;
+    padding-top: 30px;
     padding-left: 15px;
   }
 }
@@ -116,9 +127,12 @@ h4.custom-fonts:hover{
 .custom-fonts{
   color: white;
 }
+/*###CAROSEL###*/
+.glyphicon.glyphicon-chevron-right{
+   color:red;
+}
 
-
-
+/*###CAROSELENDE###*/
 
 
 

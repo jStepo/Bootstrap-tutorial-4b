@@ -40,3 +40,38 @@ input.login-btn{
 label.login-checkbox{
   color: white;
 }
+/*NAVBAR*/
+
+nav.navbar{
+  background-color: #3D1901;
+}
+nav.navbar.navbar-expand-lg{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar-toggler{
+  background-color: #008369;
+}
+.navbar-toggler-icon{
+  background-color: #008369;
+}
+nav a:hover{
+    color: rgb(238,159,53)!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

@@ -3,6 +3,7 @@ body.login-body{
   background-color: white;
 }
 /* Gradient transparent - color - transparent */
+
 hr.style-two {
   border: 0;
   height: 1px;
@@ -13,6 +14,9 @@ hr.style-two {
     rgba(0, 0, 0, 0));
 }
 /*###MiniNav###*/
+@media all and (max-width: 979px) {
+  .miniNav-Container-fluid { display: none; }
+}
 .paddingLeft{
   padding-left: 50px;
 }

@@ -1,7 +1,45 @@
 /*###STANDART####*/
 body.login-body{
-  background-color: rgb(238,159,53);
+  background-color: white;
 }
+/* Gradient transparent - color - transparent */
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image:
+    linear-gradient(to right,
+    rgba(0, 0, 0, 0),
+    rgb(237,164,50, 0.75),
+    rgba(0, 0, 0, 0));
+}
+/*###MiniNav###*/
+.paddingLeft{
+  padding-left: 50px;
+}
+a.minNav-a{
+  color: rgb(61,25,1,0.7);
+  text-decoration:underline;
+}
+a.minNav-a:visited{
+  color: rgb(61,25,1,0.7);
+  text-decoration:underline;
+}
+a.minNav-a:hover{
+  color: grey;
+  text-decoration:underline;
+}
+a.minNav-a:active{
+  text-decoration: none;
+}
+.miniNav-td{
+  width: 200px;
+  display: inline;
+  color: rgb(61,25,1,0.7);
+  font-size: 0.82rem;
+  padding-top: 30px;
+  padding-bottom: 3px;
+}
+/*###MiniNav###*/
 
 /*###LOGIN###*/
 .container.login-container{
@@ -79,7 +117,7 @@ nav a{
 }
 @media screen and (min-width: 768px){
   .jumbotron{
-    text-align: right;
+    text-align: center;
     margin:0;
   }
 }
@@ -128,10 +166,43 @@ h4.custom-fonts:hover{
   color: white;
 }
 /*###CAROSEL###*/
-.glyphicon.glyphicon-chevron-right{
-   color:red;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  background-image: none;
 }
 
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #008369;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #008369;
+}
+.ladung-col{
+
+}
+@media screen and (min-width: 768px){
+  .ladung-col{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+#Ladungsqualität-slide{
+  border:1px solid #008369;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+}
 /*###CAROSELENDE###*/
 
 

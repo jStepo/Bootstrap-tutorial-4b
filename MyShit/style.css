@@ -13,12 +13,22 @@ hr.style-two {
     rgb(237,164,50, 0.75),
     rgba(0, 0, 0, 0));
 }
+/*###Überschrift###*/
+h2.custom-color{
+  color: #3D1901!important;
+}
+/*###Überschrift###*/
+
 /*###MiniNav###*/
 @media all and (max-width: 979px) {
   .miniNav-Container-fluid { display: none; }
 }
 .paddingLeft{
   padding-left: 50px;
+}
+.mini-nav{
+  margin-top: 5px;
+  margin-bottom: 7px;
 }
 a.minNav-a{
   color: rgb(61,25,1,0.7);
@@ -35,8 +45,8 @@ a.minNav-a:hover{
 a.minNav-a:active{
   text-decoration: none;
 }
+
 .miniNav-td{
-  width: 200px;
   display: inline;
   color: rgb(61,25,1,0.7);
   font-size: 0.82rem;

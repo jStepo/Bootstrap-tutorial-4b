@@ -1,6 +1,6 @@
 /*###STANDART####*/
 body.login-body{
-  background-color: white;
+
 }
 /* Gradient transparent - color - transparent */
 
@@ -29,6 +29,7 @@ h2.custom-color{
 .mini-nav{
   margin-top: 5px;
   margin-bottom: 7px;
+  background-color: blue;
 }
 a.minNav-a{
   color: rgb(61,25,1,0.7);
@@ -219,9 +220,14 @@ h4.custom-fonts:hover{
 }
 /*###CAROSELENDE###*/
 
-
-
-
-
-
-/**/
+.container-fluid.custom-footer{
+  background-color: white!important;
+}
+.custom-footer{
+  background-color:#3D1901;
+  height: 200px;
+}
+.custom-footer-row{
+  text-align: center;
+  color: white;
+}

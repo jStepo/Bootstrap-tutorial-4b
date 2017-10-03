@@ -15,6 +15,7 @@ html, body {
 
 }
 
+
 /* FONTS
 font-family: 'Lora', serif;
 */
@@ -28,8 +29,13 @@ hr.style-two {
   background-color: rgb(238,159,53);
 }
 /*###Überschrift###*/
-h2.custom-color{
-  color: #3D1901!important;
+h2.custom-überschrift{
+  color: #3D1901;
+}
+@media all and (max-width: 740px) {
+  h2.custom-überschrift{
+      margin-top: 20px;
+  }
 }
 /*###Überschrift###*/
 
@@ -199,6 +205,12 @@ h4.custom-fonts:hover{
   color: white;
 }
 /*###CAROSEL###*/
+@media all and (max-width: 740px) {
+  .container-carousel{
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -239,7 +251,7 @@ h4.custom-fonts:hover{
 /*###CAROSELENDE###*/
 /*FOOTER*/
 .container-fluid.custom-footer{
-  background-color: white!important;
+  background-color: #3D1901!important;
 }
 .custom-footer{
   position: relative;
@@ -254,6 +266,7 @@ h4.custom-fonts:hover{
   font-family: 'Lora', serif;
   text-align: center;
   color: white;
+  background-color: #3D1901;
 }
 .table-footer{
   width: auto;
@@ -265,11 +278,27 @@ a.a-footer:hover{
   color: white;
   text-decoration: none;
 }
-.container-fluid.custom-footer-mini{
+.custom-footer-mini{
   background-color: #3D1901;
+  padding-top:10px;
   color: white;
   text-align: right;
   font-size: 0.7rem;
-  line-height: 0;
+}
+.custom-margin{
+  margin-bottom: 5px;
+}
+@media all and (max-width: 740px) {
+  .custom-footer-mini{
+    text-align: center;
+  }
+}
+@media all and (max-width: 740px) {
+  hr.style-two { display: none; }
+  .custom-footer-mini{background-color: rgb(64,64,64);}
+  .custom-footer-row{
+    background-color: rgb(64,64,64);
+    padding-top: 15px;
+  }
 }
 /*FOOTER ENDE*/

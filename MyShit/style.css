@@ -2,16 +2,17 @@
 body.login-body{
 
 }
+/* FONTS
+font-family: 'Lora', serif;
+*/
+
+
 /* Gradient transparent - color - transparent */
 
 hr.style-two {
   border: 0;
   height: 1px;
-  background-image:
-    linear-gradient(to right,
-    rgba(0, 0, 0, 0),
-    rgb(237,164,50, 0.75),
-    rgba(0, 0, 0, 0));
+  background-color: rgb(238,159,53);
 }
 /*###Überschrift###*/
 h2.custom-color{
@@ -29,7 +30,6 @@ h2.custom-color{
 .mini-nav{
   margin-top: 5px;
   margin-bottom: 7px;
-  background-color: blue;
 }
 a.minNav-a{
   color: rgb(61,25,1,0.7);
@@ -141,6 +141,10 @@ nav a{
 h4.custom-fonts:hover{
   color: rgb(238,159,53)!important;
 }
+.uben-container{
+  padding-left: 0;
+  padding-right: 0;
+}
 .uben-form{
   display: block;
   text-align: center;
@@ -153,8 +157,9 @@ h4.custom-fonts:hover{
 
 .eigenschaft-class{
   padding-top:0;
-  padding-left: 0;
+  padding-left:0;
   padding-right: 0;
+  margin:10px;
 }
 
 .uben-select{
@@ -219,15 +224,36 @@ h4.custom-fonts:hover{
 }
 }
 /*###CAROSELENDE###*/
-
+/*FOOTER*/
 .container-fluid.custom-footer{
   background-color: white!important;
 }
 .custom-footer{
   background-color:#3D1901;
-  height: 200px;
+  height: 190px;
+
 }
 .custom-footer-row{
+  padding-top: 30px;
+  font-family: 'Lora', serif;
   text-align: center;
   color: white;
 }
+.table-footer{
+  width: auto;
+  margin: auto;
+  display: block;
+}
+a.a-footer:visited, a.a-footer:active, a.a-footer,
+a.a-footer:hover{
+  color: white;
+  text-decoration: none;
+}
+.container-fluid.custom-footer-mini{
+  background-color: #3D1901;
+  color: white;
+  text-align: right;
+  font-size: 0.7rem;
+  line-height: 0;
+}
+/*FOOTER ENDE*/

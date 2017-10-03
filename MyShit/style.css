@@ -1,7 +1,20 @@
 /*###STANDART####*/
-body.login-body{
+html, body {
+  height: 100%;
 
 }
+#wrap {
+  min-height: 100%;
+
+}
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
 /* FONTS
 font-family: 'Lora', serif;
 */
@@ -229,6 +242,9 @@ h4.custom-fonts:hover{
   background-color: white!important;
 }
 .custom-footer{
+  position: relative;
+  margin-top: -170px;
+  clear: both;
   background-color:#3D1901;
   height: 190px;
 

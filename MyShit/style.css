@@ -4,8 +4,11 @@ html, body {
 
 }
 
-a{
-  outline: 0;
+button, a{
+  outline: 0!important;
+}
+button:active, a:active{
+  outline: 0!important;
 }
 #wrap {
   min-height: 100%;
@@ -52,6 +55,9 @@ h2.custom-überschrift{
 /*###MiniNav###*/
 @media all and (max-width: 979px) {
   .miniNav-Container-fluid { display: none; }
+  h2.custom-überschrift{
+    margin-top: 20px;
+  }
 }
 .paddingLeft{
   padding-left: 50px;
@@ -138,11 +144,16 @@ nav.navbar.navbar-expand-lg{
 }
 
 .navbar-toggler{
-  background-color: #008369;
-  font-size: 1.5rem;
+  background-color: ##3D1901;
+  padding:2px 5px;
+  border: none;
 }
-.custom-toggler-icon .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+.custom-navIcon{
+  max-width: 80%;
+  max-height: auto;
+  padding: 0;
+  margin: 0;
+
 }
 nav a:hover{
     color: rgb(238,159,53)!important;
@@ -157,18 +168,7 @@ nav a{
 }
 
 /*NAVBAR ENDE*/
-/*###JUMBOTRON###*/
-.jumbotron{
-  text-align: center;
-  margin:0;
-}
-@media screen and (min-width: 768px){
-  .jumbotron{
-    text-align: center;
-    margin:0;
-  }
-}
-/*###JUMBOTRON###*/
+
 /*###ÜBEN###*/
 h4.custom-fonts:hover{
   color: rgb(238,159,53)!important;

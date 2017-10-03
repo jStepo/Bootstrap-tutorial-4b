@@ -3,6 +3,10 @@ html, body {
   height: 100%;
 
 }
+
+a{
+  outline: 0;
+}
 #wrap {
   min-height: 100%;
 
@@ -25,12 +29,18 @@ font-family: 'Lora', serif;
 
 hr.style-two {
   border: 0;
-  height: 1px;
+  height: 2px;
   background-color: rgb(238,159,53);
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 0px;
+  margin-bottom: 25px;
 }
 /*###Überschrift###*/
 h2.custom-überschrift{
   color: #3D1901;
+  font-family: 'Lora', serif;
+
 }
 @media all and (max-width: 740px) {
   h2.custom-überschrift{
@@ -51,12 +61,12 @@ h2.custom-überschrift{
   margin-bottom: 7px;
 }
 a.minNav-a{
-  color: rgb(61,25,1,0.7);
-  text-decoration:underline;
+  color: #3D1901;
+
 }
 a.minNav-a:visited{
-  color: rgb(61,25,1,0.7);
-  text-decoration:underline;
+  color: #3D1901;
+
 }
 a.minNav-a:hover{
   color: grey;
@@ -64,6 +74,7 @@ a.minNav-a:hover{
 }
 a.minNav-a:active{
   text-decoration: none;
+  color: #3D1901;
 }
 
 .miniNav-td{
@@ -125,11 +136,13 @@ nav.navbar.navbar-expand-lg{
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .navbar-toggler{
   background-color: #008369;
+  font-size: 1.5rem;
 }
-.navbar-toggler-icon{
-  background-color: #008369;
+.custom-toggler-icon .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
 }
 nav a:hover{
     color: rgb(238,159,53)!important;

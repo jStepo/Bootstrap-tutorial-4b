@@ -259,9 +259,9 @@ h4.custom-fonts:hover{
   background-color: #F7F7F7;
 }
 #Ladungsqualität-slide{
-  webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
 }
 
 
@@ -274,9 +274,7 @@ h4.custom-fonts:hover{
   margin: auto;
   display: block;
 }
-.mobile-margin{
 
-}
 @media all and (max-width: 475px) {
   .mobile-margin{
     padding-left: 0!important;
@@ -346,3 +344,16 @@ a.a-footer:hover{
   }
 }
 /*FOOTER ENDE*/
+/* ### Kontakt ###*/
+#map {
+        height: 400px;
+        width: 100%;
+       }
+
+.custom-btn{
+  background-color: #008369;
+}
+.custom-form-control{
+  max-width: 300px;
+}
+/* ### Kontakt Ende###*/

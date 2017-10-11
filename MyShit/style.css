@@ -51,7 +51,11 @@ h2.custom-überschrift{
   }
 }
 /*###Überschrift###*/
-
+/*###JAVASCRIPT CLASSEN###*/
+.ausblenden{
+  display:none;
+}
+/*###JAVASCRIPT CLASSEN ENDE###*/
 /*###MiniNav###*/
 @media all and (max-width: 979px) {
   .miniNav-Container-fluid { display: none; }

@@ -345,7 +345,7 @@ var lukeArray =[
       land: "Deutschland",
       abkürzung: "DEU",
       position: 41,
-      name: "Stuttgart 1/1",
+      name: "Stuttgart",
       versand: "Standard",
       zahlen:[78200,78499,82100,83799,84400,84599,86000,86709,87680,89699]
     }
@@ -362,8 +362,6 @@ var lukeArray =[
     }
   ]
 ];
-
-
 
 //Funktionen
 function sucheOben(array, grenze){
@@ -438,6 +436,66 @@ function arrayErweitern(array){
   }
 }
 function randomFrage(luke){
+  function randomVersand(wahrscheinlichkeitVersand){
+    if(munze(wahrscheinlichkeitVersand)){
+      if(momentSortiereung.versand == "Standard" && momentSortiereung.land == "Deutschland"){
+        if(munze(0.5)){
+          versandID.textContent ="UPS EXPRESS";
+          versandArtID.textContent = "1";
+          backgroundVersandArtID.style.background = "white";
+        }
+        else{
+          versandID.textContent = "UPS SAVER";
+          versandArtID.textContent = "1P";
+          backgroundVersandArtID.style.background = "white";
+        }
+        antwort = false;
+      }
+      else if(momentSortiereung.land != "Deutschland"){
+        versandID.textContent = "UPS STANDARD";
+        versandArtID.textContent = "";
+        backgroundVersandArtID.style.background = "black";
+      }
+      else{
+        if(munze(0.5)){
+          if(munze(0.5)){
+            versandID.textContent = "UPS EXPRESS";
+            versandArtID.textContent = "1";
+            backgroundVersandArtID.style.background = "white";
+          }
+          else{
+            versandID.textContent = "UPS SAVER";
+            versandArtID.textContent = "1P";
+            backgroundVersandArtID.style.background = "white";
+          }
+        }
+        else{
+          versandID.textContent = "UPS STANDARD";
+          versandArtID.textContent = "";
+          backgroundVersandArtID.style.background = "black";
+        }
+      }
+    }
+    else{
+      if(munze(0.5) && momentSortiereung.versand == "Std./XPR"){
+        if(munze(0.5)){
+          versandID.textContent = "UPS EXPRESS";
+          versandArtID.textContent = "1";
+          backgroundVersandArtID.style.background = "white";
+        }
+        else{
+          versandID.textContent = "UPS SAVER";
+          versandArtID.textContent = "1P";
+          backgroundVersandArtID.style.background = "white";
+        }
+      }
+      else{
+        versandID.textContent = "UPS STANDARD";
+        versandArtID.textContent = "";
+        backgroundVersandArtID.style.background = "black";
+      }
+    }
+  }
   //Das eigentilche Programm
   var momentLuke;
   var momentLukeFalsch;
@@ -448,45 +506,35 @@ function randomFrage(luke){
   var momentIndex;
   var momentIndexFalsch;
   var momentVersand;
-  var antwortZahlen = true;
-  var antwortVersand = true;
+  var antwort = true;
   //Wählt zufällige Luke und zufällige Sortiereung
   momentLuke = randomPick(luke);
   momentSortiereung = randomPick(momentLuke);
 
   //Entscheidet ob die Antwort Richtig oder Falsch sein soll:
+
   //Falls die Antwort WAHR ist:
   if(munze(0.6)){
-
-    //Wählt zufällige Sortiereung
-    if(munze(0.166666666)){
-      antwortVersand = false;
-      if(momentSortiereung.versand == "Std./XPR")
-        momentVersand = "Standard";
-      else
-        momentVersand = "Std./XPR";
-    }
+    randomVersand(1.666666);
     //Wenn die zufällige Sortiereung aus Deutschland ist
     if(momentSortiereung.land == "Deutschland"){
       momentZahl = randomPick(momentSortiereung.zahlen);
       momentIndex = momentSortiereung.zahlen.indexOf(momentZahl);
       if(momentIndex % 2 == 0){
-        console.log(momentSortiereung.name);
-        console.log(momentSortiereung.sortierung);
-        console.log(momentSortiereung.land);
-        console.log(momentSortiereung.versand);
-        console.log("Position: " + momentSortiereung.position);
-        console.log(momentSortiereung.zahlen[momentIndex] + " - " + momentSortiereung.zahlen[momentIndex+1]);
-        console.log(momentSortiereung.abkürzung + " " + postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex],momentSortiereung.zahlen[momentIndex+1])]);
+        //DOM MANIPULATION
+        landID.textContent = momentSortiereung.land;
+        zahlStadtID.textContent = postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex],momentSortiereung.zahlen[momentIndex+1])];
+        abkürzungID.textContent = momentSortiereung.abkürzung;
+        lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
+        //DOM MANIPULATION ENDE
       }
       else if(momentIndex % 2 == 1){
-        console.log(momentSortiereung.name);
-        console.log(momentSortiereung.sortierung);
-        console.log(momentSortiereung.land);
-        console.log(momentSortiereung.versand);
-        console.log("Position: " + momentSortiereung.position);
-        console.log(momentSortiereung.zahlen[momentIndex-1] + " - " + momentSortiereung.zahlen[momentIndex]);
-        console.log(momentSortiereung.abkürzung + " " + postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex-1],momentSortiereung.zahlen[momentIndex])]);
+        //DOM MANIPULATION
+        landID.textContent = momentSortiereung.land;
+        zahlStadtID.textContent = postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex-1],momentSortiereung.zahlen[momentIndex])];
+        abkürzungID.textContent = momentSortiereung.abkürzung;
+        lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
+        //DOM MANIPULATION ENDE
       }
     }
     //Wenn die zufällige Sortiereung nicht aus Deutschland ist:
@@ -496,25 +544,20 @@ function randomFrage(luke){
         momentIndex = momentSortiereung.zahlen.indexOf(momentZahl);
       }
       if(momentIndex % 2 == 0 || momentSortiereung.zahlen[0] == undefined){
-        console.log(momentSortiereung.name);
-        console.log(momentSortiereung.sortierung);
-        console.log(momentSortiereung.land);
-        console.log(momentSortiereung.versand);
-        console.log("Position: " + momentSortiereung.position);
+        landID.textContent = momentSortiereung.land;
+        abkürzungID.textContent = momentSortiereung.abkürzung;
+        lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
         if(momentSortiereung.zahlen[0] != undefined){
-          console.log(momentSortiereung.zahlen[momentIndex] + " - " + momentSortiereung.zahlen[momentIndex+1]);
-          console.log(momentSortiereung.abkürzung + " " + randomRangeAusland(momentSortiereung.zahlen[momentIndex],momentSortiereung.zahlen[momentIndex+1]));
+          zahlStadtID.textContent = randomRangeAusland(momentSortiereung.zahlen[momentIndex],momentSortiereung.zahlen[momentIndex+1]);
         }
       }
       else if(momentIndex % 2 == 1){
-        console.log(momentSortiereung.name);
-        console.log(momentSortiereung.sortierung);
-        console.log(momentSortiereung.land);
-        console.log(momentSortiereung.versand);
-        console.log("Position: " + momentSortiereung.position);
+        landID.textContent = momentSortiereung.land;
+        abkürzungID.textContent = momentSortiereung.abkürzung;
+        lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
         if(momentSortiereung.zahlen[0] != undefined){
           console.log(momentSortiereung.zahlen[momentIndex-1] + " - " + momentSortiereung.zahlen[momentIndex]);
-          console.log(momentSortiereung.abkürzung + " " + randomRangeAusland(momentSortiereung.zahlen[momentIndex-1],momentSortiereung.zahlen[momentIndex]));
+          zahlStadtID.textContent = randomRangeAusland(momentSortiereung.zahlen[momentIndex-1],momentSortiereung.zahlen[momentIndex]);
         }
       }
     }
@@ -522,39 +565,29 @@ function randomFrage(luke){
 
 
   else{
-    antwortZahlen = false;
-
-
+    antwort = false;
+    randomVersand(0);
     //Wenn die zufällige Sortiereung aus Deutschland ist
     if(momentSortiereung.land == "Deutschland"){
       arrayErweitern(momentSortiereung.zahlen);
       momentZahl = randomPick(momentSortiereung.zahlen);
       momentIndex = momentSortiereung.zahlen.indexOf(momentZahl);
       if(momentIndex % 2 == 0){
-        console.log(momentSortiereung.name);
-        console.log(momentSortiereung.sortierung);
-        console.log(momentSortiereung.land);
-        console.log(momentSortiereung.versand);
-        console.log("Position: " + momentSortiereung.position);
-        console.log("-------------------------------------");
-        console.log(momentSortiereung.zahlen[momentIndex] + " - " + momentSortiereung.zahlen[momentIndex+1]);
-        console.log(momentSortiereung.abkürzung + " " + postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex],momentSortiereung.zahlen[momentIndex+1])]);
+        landID.textContent = momentSortiereung.land;
+        zahlStadtID.textContent = postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex],momentSortiereung.zahlen[momentIndex+1])];
+        abkürzungID.textContent = momentSortiereung.abkürzung;
+        lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
       }
       else if(momentIndex % 2 == 1){
-        console.log(momentSortiereung.name);
-        console.log(momentSortiereung.sortierung);
-        console.log(momentSortiereung.land);
-        console.log(momentSortiereung.versand);
-        console.log("Position: " + momentSortiereung.position);
-        console.log("-------------------------------------");
-        console.log(momentSortiereung.zahlen[momentIndex-1] + " - " + momentSortiereung.zahlen[momentIndex]);
-        console.log(momentSortiereung.abkürzung + " " + postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex-1],momentSortiereung.zahlen[momentIndex])]);
+        landID.textContent = momentSortiereung.land;
+        zahlStadtID.textContent = postZahlenStadt[randomRange(momentSortiereung.zahlen[momentIndex-1],momentSortiereung.zahlen[momentIndex])];
+        abkürzungID.textContent = momentSortiereung.abkürzung;
+        lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
       }
     }
 
     //Wenn die zufällige Sortiereung nicht aus Deutschland ist:
     else{
-      console.log("Antwort Falsch Sortierung Ausland");
       for(var i = 0; i < luke.length; i++){
         for(var j = 0; j < luke[i].length; j++){
           if(momentSortiereung.land != luke[i][j].land &&  luke[i][j].land != "Deutschland" & momentSortiereung.name != luke[i][j].name)
@@ -568,37 +601,26 @@ function randomFrage(luke){
           momentIndexFalsch = momentSortiereungFalsch.zahlen.indexOf(momentZahlFalsch);
         }
         if(momentIndexFalsch % 2 == 0 || momentSortiereungFalsch.zahlen[0] == undefined){
-          console.log(momentSortiereung.name);
-          console.log(momentSortiereung.sortierung);
-          console.log(momentSortiereung.land + " momentane Sortierung");
-          console.log(momentSortiereungFalsch.land + " falsche Sortierung");
-          console.log(momentSortiereung.versand);
-          console.log("Position: " + momentSortiereung.position);
+          landID.textContent = momentSortiereungFalsch.land;
+          abkürzungID.textContent = momentSortiereungFalsch.abkürzung;
+          lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
           if(momentSortiereungFalsch.zahlen[0] != undefined){
-            console.log(momentSortiereungFalsch.zahlen[momentIndexFalsch] + " - " + momentSortiereungFalsch.zahlen[momentIndexFalsch+1]);
-            console.log(momentSortiereungFalsch.abkürzung + " " + randomRangeAusland(momentSortiereungFalsch.zahlen[momentIndexFalsch],momentSortiereungFalsch.zahlen[momentIndexFalsch+1]));
+            zahlStadtID.textContent =  randomRangeAusland(momentSortiereungFalsch.zahlen[momentIndexFalsch],momentSortiereungFalsch.zahlen[momentIndexFalsch+1]);
           }
         }
         else if(momentIndexFalsch % 2 == 1){
-          console.log(momentSortiereung.name);
-          console.log(momentSortiereung.sortierung);
-          console.log(momentSortiereung.land + " momentane Sortierung");
-          console.log(momentSortiereungFalsch.land + " falsche Sortierung");
-          console.log(momentSortiereung.versand);
-          console.log("Position: " + momentSortiereungFalsch.position);
+          landID.textContent = momentSortiereungFalsch.land;
+          abkürzungID.textContent = momentSortiereungFalsch.abkürzung;
+          lukeFrageID.textContent = momentSortiereung.position + " " + momentSortiereung.name;
           if(momentSortiereungFalsch.zahlen[0] != undefined){
-            console.log(momentSortiereungFalsch.zahlen[momentIndexFalsch-1] + " - " + momentSortiereungFalsch.zahlen[momentIndexFalsch]);
-            console.log(momentSortiereungFalsch.abkürzung + " " + randomRangeAusland(momentSortiereungFalsch.zahlen[momentIndexFalsch-1],momentSortiereungFalsch.zahlen[momentIndexFalsch]));
+            zahlStadtID.textContent =  randomRangeAusland(momentSortiereungFalsch.zahlen[momentIndexFalsch-1],momentSortiereungFalsch.zahlen[momentIndexFalsch]);
           }
         }
     }
   }
 
   //Wenn die Antwort falsch ist
-
-    console.log("Antwort Versand: " + antwortVersand);
-    console.log("Antowrt Zahlen:  " + antwortZahlen);
-    return [antwortVersand, antwortZahlen,];
+  return antwort;
 }
 
 //### BEGIN Übung ###
@@ -609,9 +631,11 @@ var zahlStadtID = document.getElementById("zahlStadt");
 var landID = document.getElementById("land");
 var abkürzungID = document.getElementById("abkürzung");
 var lukeFrageID = document.getElementById("lukeFrage");
-
-randomFrage(lukeArray);
-
+var versandID = document.getElementById("versand");
+var versandArtID = document.getElementById("versandArt");
+var backgroundVersandArtID = document.getElementById("backgroundVersandArt");
+test123 = randomFrage(lukeArray);
+console.log(test123);
 
 
 

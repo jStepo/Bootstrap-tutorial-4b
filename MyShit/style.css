@@ -388,6 +388,10 @@ div.card-body ol li{
   .absatz6-label{
     font-size: 0.8rem!important;
   }
+  .absatz7-label{
+    border-bottom: 3px solid black!important;
+    font-size: 2.7rem!important;
+  }
   .row-label-abstand{
     width: auto;
     height: 17.1696px!important;
@@ -446,10 +450,7 @@ div.card-body ol li{
   height: 67.2px;
   border-top: 10px solid black;
 }
-.row-label-versandArt .col-2{
-  border-left: 3px solid black;
 
-}
 .row-label-barcode{
   width: auto;
   height: 121px;
@@ -588,6 +589,13 @@ button{
 }
 .absatz7-label{
   background-color: black;
+  text-align: center;
+  line-height: 0;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.absatz7-label p{
+  margin-top: 25px;
 }
 /*### ABSÄTZE ENDE ###*/
 

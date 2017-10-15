@@ -298,6 +298,12 @@ div.card-body ol li{
 
 
 /*### UPS LABEL ###*/
+.container-label{
+  max-width: 447px;
+  min-width: 447px;
+  max-height: 603px;
+  border: 3px solid black;
+}
 
 /*### MOBILE ###*/
 @media(min-width: 448px) {
@@ -374,6 +380,7 @@ div.card-body ol li{
   .absatz4-label{
     font-size: 2.045rem!important;
     word-spacing: -0.1em!important;
+    text-align: center!important;
   }
   .absatz5-label{
     font-size: 1.3rem!important;
@@ -397,6 +404,9 @@ div.card-body ol li{
     width: auto;
     height: 96.47388px!important;
   }
+
+
+
 }
 /*### MOBILE ENDE ###*/
 
@@ -438,19 +448,49 @@ div.card-body ol li{
 }
 .row-label-versandArt .col-2{
   border-left: 3px solid black;
+
 }
 .row-label-barcode{
   width: auto;
-  height: 132.156px;
+  height: 121px;
   border-top: 3px solid black;
 }
-/*### ROWS ENDE ###*/
-.container-label{
-  max-width: 448px;
-  min-width: 448px;
-  max-height: 560px;
-  border: 3px solid black;
+.row-frage{
+  width: auto;
+  height: 40px;
+  border-top: 3px solid black;
+  text-align: center;
+  line-height: 0;
+  font-size: 2rem;
+  font-weight: 600;
 }
+.row-frage p{
+margin: 18px;
+word-spacing: 1px;
+}
+button{
+  height: 100%!important;
+  border-radius: 0!important;
+  font-size: 2rem!important;
+  border:3px!important;
+}
+.button-ja{
+  background-color: #006A55!important;
+  border-right: 2px solid black!important;
+}
+.button-nein{
+  background-color: #C91A13!important;
+  border-left: 2px solid black!important;
+}
+.button-ja:hover{
+  background-color: #008c70!important;
+}
+.button-nein:hover{
+  background-color: #C92A28!important;
+}
+
+/*### ROWS ENDE ###*/
+
 .label-img-qr{
   max-width: 100%;
   max-height:auto;

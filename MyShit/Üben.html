@@ -174,8 +174,8 @@
                       <div class="row row-label-shipTo2 font-familiy-UPS">
                         <div class="col-12 paddingWeg">
                           <div class="absatz3-label">
-                            <p class="erster-p2">80687 MÜNCHEN</p>
-                            <p>DEUTSCHLAND</p>
+                            <p id="zahlStadt"class="erster-p2">80687 MÜNCHEN</p>
+                            <p id="land">DEUTSCHLAND</p>
                           </div>
 
                         </div>
@@ -196,7 +196,7 @@
                     <img src="assets/btc-spende-klein.png" class="label-img-qr ausblendenBis448">
                   </div>
                   <div class="col-8 paddingWeg">
-                    <p class="absatz4-label">DEU 321 1-00</p>
+                    <p id="abkürzung" class="absatz4-label">DEU 321 1-00</p>
                     <img src="assets/UPS-ShippingLabel-sample.png" class="label-img-barcode ausblendenAb448"alt="">
                     <img src="assets/UPS-ShippingLabel-sample-klein.png" class="label-img-barcode ausblendenBis448"alt="">
                   </div>
@@ -222,9 +222,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="row row-label-barcode font-familiy-UPS">
+                <div class="row row-frage font-familiy-UPS">
                   <div class="col-12 paddingWeg">
+                    <p id="lukeFrage">29 Frankfurt Mid</p>
+                  </div>
+                </div>
+                <div class="row row-label-barcode font-familiy-UPS">
 
+                  <div class="col-6 paddingWeg">
+                    <button id="buttonRichtig"type="button" class="btn btn-lg btn-success btn-block button-ja">RICHTIG</button>
+                  </div>
+                  <div class="col-6 paddingWeg">
+                    <button id="buttonFalsch"type="button" class="btn btn-lg btn-danger btn-block button-nein">FALSCH</button>
                   </div>
                 </div>
               </div>
